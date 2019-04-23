@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3323C1341BE33CC46A4EED18 /* Pods_ViewCodeTrainning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6566F9A180EDAB6547A72D /* Pods_ViewCodeTrainning.framework */; };
+		464917A6226F6B4800E102C9 /* GridHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464917A5226F6B4800E102C9 /* GridHeaderView.swift */; };
+		464917A8226F6D8300E102C9 /* GridHeaderViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464917A7226F6D8300E102C9 /* GridHeaderViewSpec.swift */; };
 		992F6D1A2092066000BD338D /* GridBoxViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F6D192092066000BD338D /* GridBoxViewSpec.swift */; };
 		992F6D1C20921B5800BD338D /* ViewControllerScreenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F6D1B20921B5800BD338D /* ViewControllerScreenSpec.swift */; };
 		998BB6412090C93B0056F2B9 /* ViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BB6402090C93B0056F2B9 /* ViewControllerScreen.swift */; };
@@ -35,6 +37,8 @@
 		31212B17281267C8651B2A33 /* Pods-ViewCodeTrainningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeTrainningTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewCodeTrainningTests/Pods-ViewCodeTrainningTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3617FCA067BF6086F1A34D91 /* Pods-ViewCodeTrainning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeTrainning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewCodeTrainning/Pods-ViewCodeTrainning.debug.xcconfig"; sourceTree = "<group>"; };
 		3E6566F9A180EDAB6547A72D /* Pods_ViewCodeTrainning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViewCodeTrainning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		464917A5226F6B4800E102C9 /* GridHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridHeaderView.swift; sourceTree = "<group>"; };
+		464917A7226F6D8300E102C9 /* GridHeaderViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridHeaderViewSpec.swift; sourceTree = "<group>"; };
 		992F6D192092066000BD338D /* GridBoxViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxViewSpec.swift; sourceTree = "<group>"; };
 		992F6D1B20921B5800BD338D /* ViewControllerScreenSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreenSpec.swift; sourceTree = "<group>"; };
 		994EBED0209094F1001BACEF /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 				998BB6402090C93B0056F2B9 /* ViewControllerScreen.swift */,
 				998BB6422090D1ED0056F2B9 /* CodeView.swift */,
 				998BB6442090D7C90056F2B9 /* GridBoxView.swift */,
+				464917A5226F6B4800E102C9 /* GridHeaderView.swift */,
 			);
 			path = ViewCodeTrainning;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				99D7ED862090935800295F3D /* Info.plist */,
 				992F6D192092066000BD338D /* GridBoxViewSpec.swift */,
 				992F6D1B20921B5800BD338D /* ViewControllerScreenSpec.swift */,
+				464917A7226F6D8300E102C9 /* GridHeaderViewSpec.swift */,
 			);
 			path = ViewCodeTrainningTests;
 			sourceTree = "<group>";
@@ -324,7 +330,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ViewCodeTrainning/Pods-ViewCodeTrainning-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ViewCodeTrainning/Pods-ViewCodeTrainning-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
@@ -337,7 +343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViewCodeTrainning/Pods-ViewCodeTrainning-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ViewCodeTrainning/Pods-ViewCodeTrainning-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE22040D0B4A7E8DBEBD8276 /* [CP] Embed Pods Frameworks */ = {
@@ -348,7 +354,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ViewCodeTrainningTests/Pods-ViewCodeTrainningTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ViewCodeTrainningTests/Pods-ViewCodeTrainningTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
@@ -365,7 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViewCodeTrainningTests/Pods-ViewCodeTrainningTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ViewCodeTrainningTests/Pods-ViewCodeTrainningTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -380,6 +386,7 @@
 				998BB6412090C93B0056F2B9 /* ViewControllerScreen.swift in Sources */,
 				99D7ED702090935800295F3D /* AppDelegate.swift in Sources */,
 				998BB6432090D1ED0056F2B9 /* CodeView.swift in Sources */,
+				464917A6226F6B4800E102C9 /* GridHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +396,7 @@
 			files = (
 				992F6D1A2092066000BD338D /* GridBoxViewSpec.swift in Sources */,
 				992F6D1C20921B5800BD338D /* ViewControllerScreenSpec.swift in Sources */,
+				464917A8226F6D8300E102C9 /* GridHeaderViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

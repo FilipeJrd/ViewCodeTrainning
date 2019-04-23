@@ -9,7 +9,10 @@
 import UIKit
 
 final class ViewControllerScreen: UIView {
-    
+    lazy var gridHeader: GridHeaderView = {
+        let view = GridHeaderView()
+        return view
+    }()
     
     lazy var gridBoxLeft: GridBoxView = {
         let view = GridBoxView()
@@ -54,6 +57,7 @@ extension ViewControllerScreen: CodeView {
         gridBoxContainer.addArrangedSubview(gridBoxLeft)
         gridBoxContainer.addArrangedSubview(gridBoxRight)
         addSubview(gridBoxContainer)
+        addSubview(gridHeader)
     }
     
     func setupConstraints() {
@@ -66,7 +70,7 @@ extension ViewControllerScreen: CodeView {
         }
         
         gridBoxContainer.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
+            make.centerY.equalToSuperview().offset(100)
             make.height.equalTo(250)
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().inset(20)
@@ -78,6 +82,13 @@ extension ViewControllerScreen: CodeView {
         
         gridBoxRight.snp.makeConstraints { make in
             make.height.equalToSuperview()
+        }
+        
+        gridHeader.snp.makeConstraints { make in
+            make.centerX.equalTo(self)
+            make.width.equalTo(gridBoxContainer)
+            make.height.equalTo(gridBoxContainer).multipliedBy(0.5)
+            make.bottom.equalTo(gridBoxContainer.snp.top).offset(-100)
         }
     }
     
